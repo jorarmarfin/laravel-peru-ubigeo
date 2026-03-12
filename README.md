@@ -8,6 +8,22 @@ Base package to work with Peruvian ubigeo data in Laravel.
 composer require luiscamp/laravel-peru-ubigeo
 ```
 
+## Quick start after install
+
+```bash
+# 1) Publish migration
+php artisan vendor:publish --tag=ubigeo-migrations
+
+# 2) Run migrations
+php artisan migrate
+
+# 3) Publish seeder
+php artisan vendor:publish --tag=ubigeo-seeders
+
+# 4) Seed ubigeo data
+php artisan db:seed --class="Database\\Seeders\\UbigeoSeeder"
+```
+
 ## Publish config
 
 ```bash
