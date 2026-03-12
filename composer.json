@@ -1,5 +1,6 @@
 {
     "name": "luiscamp/laravel-peru-ubigeo",
+    "version": "0.1.0",
     "description": "Peruvian ubigeo utilities for Laravel applications.",
     "type": "library",
     "license": "MIT",
