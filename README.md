@@ -21,6 +21,17 @@ php artisan vendor:publish --tag=ubigeo-migrations
 php artisan migrate
 ```
 
+## Publish model + migration (single command)
+
+```bash
+php artisan ubigeo:publish
+```
+
+Options:
+- `php artisan ubigeo:publish --model`
+- `php artisan ubigeo:publish --migration`
+- `php artisan ubigeo:publish --force`
+
 ## Publish and run seeder
 
 ```bash
