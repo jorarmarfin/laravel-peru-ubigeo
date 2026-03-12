@@ -25,8 +25,41 @@ php artisan migrate
 
 ```bash
 php artisan vendor:publish --tag=ubigeo-seeders
-php artisan db:seed --class=UbigeoSeeder
+php artisan db:seed --class="Database\\Seeders\\UbigeoSeeder"
 ```
+
+## API endpoints
+
+By default the prefix is `ubigeo` and middleware is `api`.
+
+```bash
+GET /ubigeo/search?code=010000
+GET /ubigeo/search?name=lima
+GET /ubigeo/departments?name=ama
+GET /ubigeo/provinces/010000?name=chacha
+GET /ubigeo/districts/010100?name=asuncion
+```
+
+Rules:
+- Department code: ends with `0000` (example `010000`).
+- Province code: ends with `00` and excludes departments (example `010100`).
+- District responses return `id` (not `code`).
+
+## Trait methods
+
+```php
+use LaravelPeru\Ubigeo\Traits\InteractsWithUbigeo;
+
+class UbigeoService
+{
+    use InteractsWithUbigeo;
+}
+```
+
+Available methods:
+- `getDepartament(?string $name = null)`
+- `getProvice(string $code, ?string $name = null)`
+- `getDistrict(string $code, ?string $name = null)`
 
 ## Testing
 

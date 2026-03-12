@@ -13,6 +13,7 @@ class LaravelPeruUbigeoServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
+        $this->loadRoutesFrom(__DIR__ . '/../routes/api.php');
         $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
 
         $this->publishes([
@@ -24,7 +25,7 @@ class LaravelPeruUbigeoServiceProvider extends ServiceProvider
         ], 'ubigeo-migrations');
 
         $this->publishes([
-            __DIR__ . '/Database/Seeders/UbigeoSeeder.php' => database_path('seeders/UbigeoSeeder.php'),
+            __DIR__ . '/../database/seeders/UbigeoSeeder.php' => database_path('seeders/UbigeoSeeder.php'),
         ], 'ubigeo-seeders');
     }
 }
