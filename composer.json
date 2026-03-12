@@ -1,0 +1,46 @@
+{
+    "name": "luiscamp/laravel-peru-ubigeo",
+    "description": "Peruvian ubigeo utilities for Laravel applications.",
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://github.com/jorarmarfin/laravel-peru-ubigeo",
+    "keywords": [
+        "laravel",
+        "peru",
+        "ubigeo"
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^10.0|^11.0|^12.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.0|^9.0|^10.0",
+        "phpunit/phpunit": "^10.5|^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "LaravelPeru\\Ubigeo\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "LaravelPeru\\Ubigeo\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LaravelPeru\\Ubigeo\\LaravelPeruUbigeoServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "support": {
+        "source": "https://github.com/jorarmarfin/laravel-peru-ubigeo",
+        "issues": "https://github.com/jorarmarfin/laravel-peru-ubigeo/issues"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
